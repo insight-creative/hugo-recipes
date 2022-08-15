@@ -1,0 +1,22 @@
+{{ $heroClass := lower .Page.Title }}
+<section class="{{ anchorize $heroClass }}-hero">
+  {{ $heroimage := (.Page.Resources.GetMatch (index .image)) }}
+  <div class="hero__overlay hero__overlay--home"></div>
+  <picture>
+    <source sizes="100vw" srcset="https://lcojlaw-2022.imgix.net{{ .image }}?fm=avif&q=80&width=300&height=550&fit=crop 300w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=avif&q=80&width=400&height=700&fit=crop 500w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=avif&q=80&width=800&height=640&fit=crop 800w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=avif&q=80&width=1000&height=800&fit=crop 1000w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=avif&q=80&width=1200&height=1000&fit=crop 1200w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=avif&q=80&width=1400&height=1200&fit=crop 1400w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=avif&q=80&width=1600&height=1400&fit=crop 1600w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=avif&q=80&width=1920&height=1080&fit=crop 1800w" type="image/avif">
+
+    <source sizes="100vw" srcset="https://lcojlaw-2022.imgix.net{{ .image }}?fm=webp&q=80&width=300&height=550&fit=crop 300w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=webp&q=80&width=400&height=700&fit=crop 500w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=webp&q=80&width=800&height=640&fit=crop 800w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=webp&q=80&width=1000&height=800&fit=crop 1000w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=webp&q=80&width=1200&height=1000&fit=crop 1200w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=webp&q=80&width=1400&height=1200&fit=crop 1400w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=webp&q=80&width=1600&height=1400&fit=crop 1600w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=webp&q=80&width=1920&height=1080&fit=crop 1800w" type="image/webp">
+
+    <source sizes="100vw" srcset="https://lcojlaw-2022.imgix.net{{ .image }}?&q=80&width=300&height=550&fit=crop 300w, https://lcojlaw-2022.imgix.net{{ .image }}?q=80&width=400&height=700&fit=crop 500w, https://lcojlaw-2022.imgix.net{{ .image }}?q=80&width=800&height=640&fit=crop 800w, https://lcojlaw-2022.imgix.net{{ .image }}?q=80&width=1000&height=800&fit=crop 1000w, https://lcojlaw-2022.imgix.net{{ .image }}?q=80&width=1200&height=1000&fit=crop 1200w, https://lcojlaw-2022.imgix.net{{ .image }}?q=80&width=1400&height=1200&fit=crop 1400w, https://lcojlaw-2022.imgix.net{{ .image }}?q=80&width=1600&height=1400&fit=crop 1600w, https://lcojlaw-2022.imgix.net{{ .image }}?q=80&width=1920&height=1080&fit=crop 1800w" type="image/jpg">
+    
+    <img sizes="100vw" src="https://lcojlaw-2022.imgix.net{{ .image }}" width="1920" height="1080" alt="">
+  </picture>
+  <div class="home-hero__inner wrapper-lg flow">
+    <h1>{{ .heading | markdownify }}</h1>
+    <h2 class="h4">{{ .body | markdownify }}</h2>
+    <a href="{{ .button_url }}" class="btn btn-primary">{{ .button_text }}</a>
+  </div>
+  <div class="coj-watermark">
+    {{ partialCached "svg-icons/COJ-logomark-watermark.svg" . }}
+  </div>
+</section>

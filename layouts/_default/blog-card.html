@@ -1,0 +1,31 @@
+<article class="card fade-up">
+	<a href="{{ .Permalink }}" class="card__link">
+		<div class="card__content flex flex-column flex-justify-between">
+			<div>
+				{{ $author := index .Site.Data.authors (.Params.author | default "default") }}
+				{{- if $author -}}
+				<div class="card__author flex flex-center">
+					{{- if eq $author.name "Law Firm of Conway, Olejniczak & Jerry, S.C." -}}
+					<img src="{{ $author.image }}" class="card__author-image" alt="Photo of {{ $author }}" width="50" height="50">
+					{{ else }}
+					<picture>
+						<source srcset="https://lcojlaw-2022.imgix.net{{ $author.image }}?q=70&w=100&h=100&mask=ellipse&crop=focalpoint&fit=crop&fp-x=.525&fp-y=.2&fp-z=1.75&fm=avif" type="image/avif">
+
+						<source srcset="https://lcojlaw-2022.imgix.net{{ $author.image }}?q=70&w=100&h=100&mask=ellipse&crop=focalpoint&fit=crop&fp-x=.525&fp-y=.2&fp-z=1.75&fm=webp" type="image/webp">
+
+						<source srcset="https://lcojlaw-2022.imgix.net{{ $author.image }}?q=70&w=100&h=100&mask=ellipse&crop=focalpoint&fit=crop&fp-x=.525&fp-y=.2&fp-z=1.75&fm=jpg" type="image/jpg">
+
+						<img src="https://lcojlaw-2022.imgix.net{{ $author.image }}" class="card__author-image" alt="Photo of {{ $author }}" width="50" height="50">
+					</picture>
+					{{ end }}
+					<h3 class="card__name h6 no-margin">{{ $author.name }}</h3>
+				</div>
+				{{ end }}
+				<h3 class="card__title h5">{{ .Title }}</h3>
+			</div>
+			<span class="card__read-more flex flex-center">
+					Read Article {{ partialCached "svg-icons/double-chevron-right.svg" . }}
+			</span>
+		</div>
+	</a>
+</article>

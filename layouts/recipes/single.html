@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="block">
+    <div class="post-content wrapper">
+        <div class="post-content__inner flow">
+            {{ .Content  }}
+            {{ partial "blog/share-buttons" . }}
+        </div>
+        {{ partial "blog/post-navigation" . }}
+    </div>
+</div>
+{{ end }}

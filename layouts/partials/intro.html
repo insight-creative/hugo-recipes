@@ -1,0 +1,18 @@
+<section aria-labelledby="intro-heading" class="intro block">
+    <div class="wrapper-lg flow fade-up">
+        {{ with .Params.intro }}
+        {{ if .heading }}
+        <div>
+            <h2 id="intro-heading" class="no-margin">{{ .heading }}</h2>
+            <div class="divider"></div>
+        </div>
+        {{ end }}
+        {{ if .body }}
+        <p>{{ .body | markdownify }}</p>
+        {{ end }}
+        {{ if .button }}
+        <a href="{{ .button_url }}" class="btn btn-primary">{{ .button_text }}</a>
+        {{ end }}
+        {{ end }}
+    </div>
+</section>

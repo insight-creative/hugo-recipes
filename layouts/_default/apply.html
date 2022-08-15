@@ -1,0 +1,43 @@
+{{ define "main" }}
+{{ partial "hero" (dict "Page" . "image" .Params.hero.hero_image.image "alt" .Params.hero.hero_image.image_alt "heading" .Params.hero.heading "body" .Params.hero.body ) }}
+<div class="block">
+    <div class="contact-form wrapper">
+        <form name="job_application" enctype="multipart/form-data" method="post" action="/thank-you-apply/">
+            <div class="visually-hidden">
+              <label for="_subject">New form submission from the lcojlaw.com application form</label>
+              <input aria-label="subject" name="_subject" value="New form submission from the lcojlaw.com application form" />
+            </div>
+            <h2 class="text-primary no-margin">Applicant Information</h2>
+            <hr>
+            <div class="contact-form__form-row">
+              <div class="contact-form__row-wrapper">
+                <div class="contact-form__form-group">
+                  <label for="First_Name">First Name*</label>
+                  <input aria-label="First_Name" name="First_Name" type="text" class="contact-form__form-control" required>
+                </div>
+                <div class="contact-form__form-group">
+                  <label for="Last_Name">Last Name*</label>
+                  <input aria-label="Last_Name" name="Last_Name" type="text" class="contact-form__form-control" required>
+                </div>
+              </div>
+            </div>
+            <div class="contact-form__form-group">
+                <label for="Email">Email*</label>
+                <input aria-label="Email" name="_replyto" type="email" class="contact-form__form-control" required>
+            </div>
+            <div class="contact-form__form-group">
+                <label for="Phone">Phone*</label>
+                <input aria-label="Phone" name="Phone" type="tel" class="contact-form__form-control" required>
+            </div>
+            <div class="mb-6">
+                <label for="resume">Resume/Cover Letter*</label>
+                <input aria-label="resume" name="resume" type="file">
+            </div>
+            <input type="hidden" name="inbox_key" value="lcoj-form-inbox">
+            <input type="text" name="_gotcha" style="display: none;">
+            <!-- <div class="h-captcha" data-sitekey="1e9bb55c-d77b-4e97-8b6c-7357bd21dd64"></div> -->
+            <button target="_blank" type="submit" class="contact-form__btn btn btn-primary">Send Application</button>
+        </form>
+    </div>
+</div>
+{{ end }}

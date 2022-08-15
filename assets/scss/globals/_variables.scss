@@ -1,0 +1,50 @@
+// Colors
+$primary-color: #5A481C;
+$secondary-color: #9F8A58;
+$light-gray: #f6f6f6;
+$gray: #585858;
+$black: #231F20;
+$white: #ffffff;
+
+// overlays
+$white-overlay: rgba(255, 255, 255, 0.9);
+
+$blue-shadow: rgba(43, 59, 147, 0.2);
+
+// Fonts
+$primary-font: source-sans-pro, sans-serif;
+$secondary-font: goudy-old-style, serif;
+
+$mobile-header: 104px;
+$desktop-header: 149px;
+
+// Scale and rhythm based on a major third
+$scale: 1.25;
+
+$ic--200: 1rem / $scale / $scale;
+$ic--100: 1rem / $scale;
+$ic-100: 1rem;
+$ic-200: 1rem * $scale;
+$ic-300: 1rem * $scale * $scale;
+$ic-400: 1rem * $scale * $scale * $scale;
+$ic-500: 1rem * $scale * $scale * $scale * $scale;
+$ic-600: 1rem * $scale * $scale * $scale * $scale * $scale;
+$ic-700: 1rem * $scale * $scale * $scale * $scale * $scale * $scale;
+$ic-800: 1rem * $scale * $scale * $scale * $scale * $scale * $scale * $scale;
+$ic-900: 1rem * $scale * $scale * $scale * $scale * $scale * $scale * $scale *
+  $scale;
+$ic-1000: 1rem * $scale * $scale * $scale * $scale * $scale * $scale * $scale *
+  $scale * $scale;
+
+// // Scale and rhythm based on a perfect fourth
+// $ic-100: 0.75rem;
+// $ic-200: 1rem;
+// $ic-300: 1.333rem;
+// $ic-400: 1.777rem;
+// $ic-500: 2.369rem;
+// $ic-600: 3.157rem;
+// $ic-700: 4.209rem;
+
+$measure-short: 60ch;
+$measure: 80ch;
+$measure-long: 90ch;

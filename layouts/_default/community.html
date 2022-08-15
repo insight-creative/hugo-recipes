@@ -1,0 +1,41 @@
+{{ define "main" }}
+{{ partial "hero" (dict "Page" . "image" .Params.hero.hero_image.image "alt" .Params.hero.hero_image.image_alt "heading" .Params.hero.heading "body" .Params.hero.body ) }}
+{{ with .Params.making_a_difference_block }}
+<div class="block">
+    <div class="wrapper-lg flow">
+        <div>
+            <h2>{{ .heading }}</h2>
+            <div class="divider"></div>
+        </div>
+        <p>{{ .body }}</p>
+        <ul class="logo-grid max-width-none no-padding">
+            {{ range .organizations }}
+            <li class="no-list-style no-margin">
+                <a href="{{ .org_website }}" target="_blank" rel="noreferrer noopener" class="brand-card">
+                    <img src="{{ .image_url }}" alt="{{ .organization }} logo" class="dim">
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+        <h3>{{ .subheading }}</h3>
+        <div class="styled-list">
+            <ul>
+                {{ range .additional_organizations }}
+                <li>
+                    {{ if .org_website }}
+                    <a href="{{ .org_website }}" target="_blank" rel="noreferrer noopener">
+                        {{ .organization }}
+                    </a>
+                    {{ else }}
+                    {{ .organization }}
+                    {{ end }}
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+</div>
+{{ end }}
+{{ partial "testimonials" . }}
+{{ partial "cta" . }}
+{{ end }}

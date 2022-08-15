@@ -1,0 +1,11 @@
+{{ $image := (.Page.Resources.GetMatch (index .image .alt)) }}
+
+<picture>
+    <source srcset="https://lcojlaw-2022.imgix.net{{ .image }}?fm=avif&q=80&width=375&height=250&fit=crop 400w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=avif&q=80&width=550&height=350&fit=crop 600w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=avif&q=80width=650&height=450&fit=crop 800w" type="image/avif">
+
+    <source srcset="https://lcojlaw-2022.imgix.net{{ .image }}?fm=webp&q=80&width=375&height=250&fit=crop 400w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=webp&q=80&width=550&height=350&fit=crop 600w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=webp&q=80width=650&height=450&fit=crop 800w" type="image/webp">
+
+    <source srcset="https://lcojlaw-2022.imgix.net{{ .image }}?fm=jpg&q=80&width=375&height=250&fit=crop 400w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=jpg&q=80&width=550&height=350&fit=crop 600w, https://lcojlaw-2022.imgix.net{{ .image }}?fm=jpg&q=80width=650&height=450&fit=crop 800w" type="image/jpg">
+
+    <img loading="lazy" src="https://lcojlaw-2022.imgix.net{{ .image }}" width="500" height="500" alt="{{ .alt }}">
+</picture>

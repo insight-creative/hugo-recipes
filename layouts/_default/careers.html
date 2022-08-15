@@ -1,0 +1,9 @@
+{{ define "main" }}
+{{ partial "hero" (dict "Page" . "image" .Params.hero.hero_image.image "alt" .Params.hero.hero_image.image_alt "heading" .Params.hero.heading "body" .Params.hero.body ) }}
+{{ partial "intro" . }}
+{{ range .Params.page_blocks }}
+{{ partial "page-block" . }}
+{{ end }}
+{{ partial "testimonials" . }}
+{{ partial "cta" . }}
+{{ end }}
