@@ -1,14 +1,14 @@
 @import "globals/variables";
 
 body {
-  background-color: $black;
+  background-color: $dark-black;
   color: $white;
 }
 
 .site-header,
 .nav-list,
 .nav-list__dropdown {
-  background-color: $black;
+  background-color: $dark-black;
 }
 
 .nav-list__link {
@@ -29,6 +29,6 @@ a {
 .btn-secondary {
   &:hover,
   &:focus {
-    background-color: $black;
+    background-color: $dark-black;
   }
 }

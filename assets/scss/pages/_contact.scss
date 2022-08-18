@@ -19,7 +19,7 @@
 
   &__wrapper {
     padding-top: $ic-900;
-    border-top: 1px solid $gray;
+    border-top: 1px solid $brand-black;
   }
 
   &__netlify-bot-field {
@@ -36,7 +36,7 @@
   .contact-form__form-group input,
   .contact-form__form-group textarea,
   .contact-form__form-group select {
-    box-shadow: inset 4px 4px 8px 0 rgba($black, 0.1);
+    box-shadow: inset 4px 4px 8px 0 rgba($dark-black, 0.1);
     width: 100%;
     padding: $ic-400 $ic-200;
     margin-bottom: $ic-200;

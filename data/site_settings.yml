@@ -1,8 +1,14 @@
-logo: /uploads/conway-olejniczak-jerry-logo-long.svg
-footer_logo: /uploads/conway-olejniczak-jerry-gold-logo-long.svg
-business_name: Hugo Recipes
+logo: /uploads/Insight-Logo-White.png
+footer_logo: /uploads/Insight-Logo-White.png
+business_name: Insight Creative, Inc.
 social_media:
   - title: Facebook
-    link:
+    link: https://www.facebook.com/insightcreativeinc
+  - title: Twitter
+    link: https://twitter.com/insightwi
+  - title: Instagram
+    link: https://www.instagram.com/insightwi/
+  - title: YouTube
+    link: https://www.youtube.com/channel/UCDE7J9ImgM3JVgT030sM3VA
   - title: LinkedIn
-    link:
+    link: https://www.linkedin.com/company/insight-creative-inc./mycompany/

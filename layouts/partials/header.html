@@ -1,7 +1,7 @@
 {{ "<!-- Header -->" | safeHTML }}
 <a class="screen-reader-skip-to-content" href="#main-content" tabindex="0">Skip to main content</a>
 <a class="screen-reader-skip-to-content" href="#footer" tabindex="0">Skip to footer content</a>
-<header class="site-header" role="banner">
+<header class="site-header">
   <div class="site-header__wrapper wrapper-lg">
     <div class="site-header__logo">
       <a class="brand-logo" href="{{ site.BaseURL }}">
@@ -12,54 +12,16 @@
         {{ end }}
       </a>
     </div>
-    <nav class="site-header__nav" role="navigation" aria-label="primary navigation">
-      <div class="site-header__top">
-        <div class="site-header__top-inner flex flex-justify-end">
-          <ul class="site-header__secondary-menu flex flex-center">
-            {{ with .Site.Menus.secondary }}
-            {{ range . }}
-            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-            {{ end }}
-            {{ end }}
-          </ul>
-        </div>
-      </div>
+    <nav class="site-header__nav" aria-label="primary navigation">
       <div class="site-header__primary">
-        <ul class="nav-list" role="list">
+        <ul class="nav-list">
           {{ $url := .RelPermalink }}
           {{ range .Site.Menus.main }}
-          
-          {{ $active := eq $url .URL }}
-          {{ $contact := eq "Contact Us" .Name }}
-            {{ if .HasChildren }}
-                <li class="nav-list__item has-sub-menu">
-                  <a {{if $active }}class="current nav-list__link" {{end}} class="nav-list__link" href="{{ .URL }}" aria-label="{{ .Name }}">
-                    {{ .Name }}
-                    <span class="sub-menu-indicator"></span>
-                  </a>
-                  <div class="nav-list__sub-menu sub-menu">
-                    <ul class="sub-menu__inner">
-                      {{ range sort .Children "value" "desc" }}
-                        <li class="sub-menu__item">
-                            <a class="sub-menu__link" href="{{ .URL }}" aria-label="{{ .Name }}">{{ .Name }}{{ partialCached "svg-icons/chevron-right.svg" . }}</a>
-                        </li>
-                      {{ end }}
-                    </ul>
-                  </div>
-                </li>
-            {{ else }}
-            <li class="nav-list__item">
-              {{ if $contact }}
-              <a class="btn btn-primary" href="{{ .URL }}" aria-label="{{ .Name }}">
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="{{ .URL }}" aria-label="{{ .Name }}">
                 {{ .Name }}
-              </a>
-              {{ else }}
-              <a {{if $active }}class="current nav-list__link" {{end}} class="nav-list__link" href="{{ .URL }}" aria-label="{{ .Name }}">
-                  {{ .Name }}
-              </a>
-              {{ end }}
-            </li>
-            {{ end }}    
+            </a>
+          </li>   
           {{ end }}
         </ul>
       </div>
@@ -73,11 +35,6 @@
                 {{ .Name }}
             </a>
           </li>  
-          {{ end }}
-          {{ with .Site.Menus.secondary }}
-          {{ range . }}
-          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-          {{ end }}
           {{ end }}
         </ul>
       </div>

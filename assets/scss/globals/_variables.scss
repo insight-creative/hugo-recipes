@@ -1,9 +1,12 @@
 // Colors
-$primary-color: #5A481C;
-$secondary-color: #9F8A58;
+$brand-black: #414042;
+$dark-black: #1d1d1d;
+$body-black: #292929;
+$primary-color: #cd1f40;
+$secondary-color: #92981b;
+$tertiary-color: #8bc0c6;
+$dark-gray: #a8a8a8;
 $light-gray: #f6f6f6;
-$gray: #585858;
-$black: #231F20;
 $white: #ffffff;
 
 // overlays
@@ -11,9 +14,55 @@ $white-overlay: rgba(255, 255, 255, 0.9);
 
 $blue-shadow: rgba(43, 59, 147, 0.2);
 
+/* mulish-regular - latin */
+@font-face {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+       url('../fonts/mulish-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/mulish-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* mulish-500 - latin */
+@font-face {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/mulish-v12-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/mulish-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* mulish-700 - latin */
+@font-face {
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/mulish-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/mulish-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* mulish-500italic - latin */
+@font-face {
+  font-family: 'Mulish';
+  font-style: italic;
+  font-weight: 500;
+  src: local(''),
+       url('../fonts/mulish-v12-latin-500italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/mulish-v12-latin-500italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* mulish-700italic - latin */
+@font-face {
+  font-family: 'Mulish';
+  font-style: italic;
+  font-weight: 700;
+  src: local(''),
+       url('../fonts/mulish-v12-latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/mulish-v12-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 // Fonts
-$primary-font: source-sans-pro, sans-serif;
-$secondary-font: goudy-old-style, serif;
+$primary-font: mulish, sans-serif;
+$secondary-font: mulish, sans-serif;
 
 $mobile-header: 104px;
 $desktop-header: 149px;

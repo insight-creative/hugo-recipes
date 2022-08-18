@@ -1,7 +1,7 @@
 ---
 title: About
 menu:
-  secondary:
+  main:
     weight: 2
 seo:
   page_title: About Hugo Recipes
