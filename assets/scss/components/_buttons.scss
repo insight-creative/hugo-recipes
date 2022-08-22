@@ -4,11 +4,11 @@
   padding: 0.5rem 2.5rem;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: $ic-200;
+  font-size: $ic-100;
   letter-spacing: 1.6px;
 
   @include breakpoint(md) {
-    font-size: $ic-300;
+    font-size: $ic-200;
   }
 }
 

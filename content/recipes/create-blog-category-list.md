@@ -5,6 +5,7 @@ seo:
   meta_description:
   featured_image:
   featured_image_alt:
+date: 2022-08-03
 ---
 
 ```
