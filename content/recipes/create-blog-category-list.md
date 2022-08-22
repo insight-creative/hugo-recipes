@@ -1,7 +1,7 @@
 ---
-title: "Create a Blog Category List"
+title: "Create a blog category list"
 seo:
-  page_title: "Create a Blog Category List"
+  page_title: "Create a blog category list"
   meta_description:
   featured_image:
   featured_image_alt:

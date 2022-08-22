@@ -9,6 +9,23 @@ a {
   }
 }
 
+.site-main a:not(.btn):not(.breadcrumbs__link):not(.card):not(.card a):not(.share-buttons__link) {
+  color: $white;
+  text-decoration: none;
+  background-image: linear-gradient($tertiary-color, $tertiary-color),linear-gradient(270deg,$primary-color 0%,$primary-color 100%);
+  background-size: 100% 3px,0 3px;
+  background-position: 100% 100%,0 100%;
+  background-repeat: no-repeat;
+  transition: background-size $transition,background-position $transition,color $transition;
+
+  &:hover,
+  &:focus {
+    background-size: 0 3px,100% 3px;
+    background-position: 100% 100%,0 100%;
+    text-decoration: none;
+  }
+}
+
 .decorated-link {
   text-decoration: none;
   position: relative;

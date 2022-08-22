@@ -18,8 +18,9 @@ table,
 }
 
 body {
+  background-color: $body-black;
   font-family: $primary-font;
-  color: $dark-black;
+  color: $light-gray;
 }
 
 :focus {

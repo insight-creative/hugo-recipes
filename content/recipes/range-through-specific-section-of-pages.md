@@ -1,7 +1,7 @@
 ---
-title: "Range Through Specific Section of Pages"
+title: "Range through a specific section of pages from anywhere on your website"
 seo:
-  page_title: "Range Through Specific Section of Pages"
+  page_title: "Range through a specific section of pages from anywhere on your website"
   meta_description:
   featured_image:
   featured_image_alt:

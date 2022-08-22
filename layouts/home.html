@@ -1,15 +1,21 @@
 {{ define "main" }}
+<div class="block bg-black">
+    <div class="wrapper">
+        <h1>Hugo Recipes</h1>
+        <p>There are a lot of great <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> resources out there, but it can be overwhelming as you figure out where to start. hugo.recipes helps you build a Hugo website from scratch, while showing you how to add individual features to craft the exact site you need.</p>
+    </div>
+</div>
 <div class="block">
     <div class="wrapper">
-        <h1>Hugo recipes</h1>
+        <h1>The Recipes</h1>
         {{ $recipes := where .Site.RegularPages "Section" "recipes" }}
-        <ul>
+        <ol>
             {{ range $recipes }}
             <li>
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
             </li>
             {{ end }}
-        </ul>
+        </ol>
     </div>
 </div>
 {{ end }}
