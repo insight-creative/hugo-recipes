@@ -1,0 +1,7 @@
+pre {
+    background-color: $dark-black;
+    background-image: linear-gradient(8deg,$dark-black, $body-black);
+    padding: $ic-300;
+    font-size: 1rem;
+    overflow: auto;
+}

@@ -6,6 +6,8 @@ seo:
   featured_image:
   featured_image_alt:
 date: 2022-08-01
+categories:
+  - Design
 ---
 
 Hugo comes with built in processing for SASS/SCSS with their pipes system. In order to process an asset with Hugo Pipes, it must be retrieved as a Resource using resources.Get or resources.GetRemote so it needs to live in the assets folder of your website. You also need to have the Hugo extended version for SASS/SCSS processing.
