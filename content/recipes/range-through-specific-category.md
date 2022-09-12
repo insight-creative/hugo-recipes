@@ -11,7 +11,7 @@ date: 2022-09-06
 Range through a specific category of posts based on a parameter.
 
 ```
-{{ range where (where .Site.RegularPages "Type" "recipes") "Params.featured" "=" true }}
+{{ range where (where .Site.RegularPages "Type" "blog") "Params.featured" "=" true }}
   <li>{{ .Title }}</li>
 {{ end }}
 ```
@@ -19,7 +19,7 @@ Range through a specific category of posts based on a parameter.
 Range through a specific category of posts. Ex. ranging through a posts of a featured category. 
 
 ```
-{{ range (.Paginate ( where .Site.RegularPages "Type" "recipes" )).Pages }}
+{{ range (.Paginate ( where .Site.RegularPages "Type" "blog" )).Pages }}
     {{ if in .Params.categories "Featured" }}
         <li>{{ .Title }}</li>
     {{ end }}
@@ -29,7 +29,7 @@ Range through a specific category of posts. Ex. ranging through a posts of a fea
 Range through posts while excluding a specific category.
 
 ```
-{{ range (.Paginate ( where .Site.RegularPages "Type" "recipes" )).Pages }}
+{{ range (.Paginate ( where .Site.RegularPages "Type" "blog" )).Pages }}
     {{ if not (in .Params.categories "Featured") }}
         <li>{{ .Title }}</li>
     {{ end }}
