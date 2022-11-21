@@ -6,6 +6,8 @@ seo:
   featured_image:
   featured_image_alt:
 date: 2022-10-03
+categories: 
+  - Featured
 ---
 
 To easily allow content blocks to be toggled on and off add an enabled parameter to your front matter for each block. 

@@ -6,6 +6,8 @@ seo:
   featured_image:
   featured_image_alt:
 date: 2022-08-03
+categories: 
+  - Featured
 ---
 
 ```
